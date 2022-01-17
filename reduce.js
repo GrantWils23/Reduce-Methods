@@ -94,14 +94,20 @@ console.log(namesOfTeamMembers)
 //   yrsExperience: 7
 // },
 
-let findingDeveloperWithMostExperience = teamMembers.reduce((acc, curr) => {
-  let key = curr.profession;
-  if (curr[key] === "Developer") {
-    return curr
-  } 
-  return acc += curr;
-},);
 
-console.log(findingDeveloperWithMostExperience)
+//   let key = curr.profession;
+//   if (curr[key] === "Developer") {
+//     // return acc += curr
+//   } 
+//   return acc += curr;
+// },);
 
-  // filter(person => person.name === "Arial")
+// console.log(findingDeveloperWithMostExperience)
+
+const developerRoleFilter = teamMembers.filter(person => person.profession === "Developer")
+console.log(developerRoleFilter)
+
+// let findingDeveloperWithMostExperience = teamMembers.reduce((acc, curr.profession) => {
+//   let key = curr.yrsExperience;
+//   if acc[key] >
+// };
