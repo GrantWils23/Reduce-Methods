@@ -94,20 +94,14 @@ console.log(namesOfTeamMembers)
 //   yrsExperience: 7
 // },
 
+let sortByRole = teamMembers.filter(employee => employee.profession === 'Developer');
+console.log(sortByRole)
 
-//   let key = curr.profession;
-//   if (curr[key] === "Developer") {
-//     // return acc += curr
-//   } 
-//   return acc += curr;
-// },);
+let findMostExpEmployee = sortByRole.reduce((acc, curr) => {
+  if (acc.yrsExperience < curr.yrsExperience) {
+    acc = curr;
+  }
+  return acc;
+}, sortByRole[0]);
 
-// console.log(findingDeveloperWithMostExperience)
-
-const developerRoleFilter = teamMembers.filter(person => person.profession === "Developer")
-console.log(developerRoleFilter)
-
-// let findingDeveloperWithMostExperience = teamMembers.reduce((acc, curr.profession) => {
-//   let key = curr.yrsExperience;
-//   if acc[key] >
-// };
+console.log(findMostExpEmployee);
